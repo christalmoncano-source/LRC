@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #ffffff;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px 20px;
+    background: white;
+    border-bottom: 1px solid #eaeef2;
+}
+
+nav a {
+    color: #4a5568;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+nav a:hover, nav a.active {
+    color: #1e3a8a;
+    border-bottom-color: #d4af37;
+}
+
+/* Container */
+.container {
+    max-width: 1300px;
+    margin: 60px auto;
+    padding: 0 40px;
+    flex: 1;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50%;
+    border: 5px solid #1e3a8a;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.hero-content {
+    flex: 1.5;
+}
+
+.myname{
+    font-size: 40px;
+}
+
+.hero-content h1 {
+    /* font-size: 3rem; */
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #4a5568;
+    max-width: 600px;
+    margin-bottom: 35px;
+}
+
+.hero-content .btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #1e3a8a;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: 2px solid #1e3a8a;
+    transition: all 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background: transparent;
+    color: #1e3a8a;
+    border-color: #d4af37;
+}
+
+/* Section Headers */
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    padding-left: 15px;
+}
+
+/* Worked With Section */
+.worked-with {
+    margin-bottom: 80px;
+}
+
+.company-logos {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.company-logos span {
+    color: #1e3a8a;
+    font-weight: 600;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+}
+
+.company-logos span:hover {
+    opacity: 1;
+    color: #d4af37;
+}
+
+/* Accomplishments Section */
+.accomplishments {
+    margin-bottom: 80px;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.stat-card {
+    padding: 40px;
+    background: #f8fafc;
+    border-radius: 30px;
+    border: 1px solid #eaeef2;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.stat-card h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+/*para sa content sa OFFICER N S.A.*/
+.stat-card p {
+    color: #557dc1;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    background: #f8fafc;
+    color: #4a5568;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    border-top: 1px solid #eaeef2;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .company-logos {
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    nav {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
